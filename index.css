@@ -1,0 +1,162 @@
+/* Default styles */
+html {
+  font-size: 62.5%;
+  font-weight: bold;
+}
+
+body {
+  background-image: url('BG.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: auto; /* Center the container horizontally */
+}
+
+.container {
+  max-width: 800px;
+  padding: 30px;
+  margin: auto; /* Center the container horizontally */
+  animation: containerEntrance 1.5s ease forwards; /* Apply the animation */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1,
+h2,
+p {
+  color: rgb(0, 67, 116);
+  font-size: 50px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+h1 {
+  top: 10rem;
+}
+
+h2 {
+  font-size: 20rem;
+  top: -7rem;
+  left: 1rem;
+}
+
+p {
+  top: -20rem;
+}
+
+#save-btn:hover {
+  background: #f95700;
+  color: white;
+  cursor: pointer;
+}
+
+#increment-btn:hover {
+  background: #009bde;
+  cursor: pointer;
+}
+
+#increment-btn {
+  background: rgb(253, 125, 46);
+  font-weight: bold;
+  color: white;
+  left: 10rem;
+  padding: 3rem 13rem;
+  border-width: 2rem;
+  border-radius: 2rem;
+  top: -22rem;
+}
+
+.BgSquare1 {
+  background-color: aliceblue;
+  padding: 40rem;
+  opacity: 100%;
+  border-radius: 20px;
+  display: flex;
+  position: absolute;
+  align-content: center;
+  justify-content: center;
+  top: 12rem;
+  z-index: 1;
+}
+
+.BgSquare2 {
+  background-color: rgb(255, 81, 0);
+  padding: 40rem;
+  margin: 10rem;
+  border-radius: 100px;
+  display: flex;
+  position: absolute;
+  top: 4rem;
+  z-index: 0;
+}
+
+/*ANIMATION*/
+
+button {
+  text-align: left;
+  border-color: rgb(249, 167, 59);
+  padding: 3rem 5rem;
+  font-size: 5rem;
+  position: relative;
+  z-index: 2;
+  animation: fadeInFromLeft 1.75s ease-in-out forwards;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#save-btn {
+  background: rgb(#8bd4ee);
+  font-weight: bold;
+  font-size: 5rem;
+  top: -20rem;
+  left: 18rem;
+  padding: 3rem 15rem;
+  border-width: 1rem;
+  border-radius: 2rem;
+  opacity: 0; /* Initially hide the save button */
+  animation: fadeInFromLeft 1.75s ease-in-out forwards;
+  animation-delay: 1.5s; /* Adjust the delay based on the animation duration of the increment button */
+}
+
+@keyframes fadeInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px); /* Move the button 50px to the left */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(
+      0
+    ); /* Move the button back to its original position */
+  }
+}
+
+@keyframes containerEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px); /* Move the container 50px up */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(
+      0
+    ); /* Move the container back to its original position */
+  }
+}
+
+/* Media query for smaller screen sizes */
+@media screen and (max-width: 1900px) {
+  body {
+    background-size: 100% 100%; /* Adjust background size */
+    background-position: center; /* Adjust background position */
+    background-repeat: repeat;
+    overflow: hidden;
+    .container {
+      max-width: 800px;
+      padding: 30px;
+      margin: auto; /* Center the container horizontally */
+    }
+  }
+}
